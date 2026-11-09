@@ -6,6 +6,12 @@
 ## Executive Summary
 This document outlines the strategic roadmap, analytical methodology, decision framework, and competitive advantages to achieve a perfect **30/30 score** in SFU DSSS DataJam 2026.
 
+### Key Deadlines & Presentation Formats:
+* **Submission Deadline:** Saturday, November 14
+* **Presentation Day:** Sunday, November 15
+* **🟢 Preliminary Round (All Teams):** **7-minute pitch + 3-minute Q&A** *(Requires a laser-focused 6–7 slide narrative; every second counts)*
+* **🏆 Final Round (Finalists Only):** **10-minute pitch + 5-minute Q&A** *(Allows deeper walk-through of sensitivity analysis & decision justifications)*
+
 ---
 
 ## Part 1: The Core Questions & How We Will Answer Them

@@ -31,7 +31,7 @@ You are an analytics consultancy retained by DDD. The fund has a $10M CAD mandat
 | **Your call** | Where, how many properties, what type and mix |
 | **Central trade-off** | Few high-value properties vs. many modest ones |
 | **Audience** | DDD's investment committee (the judges) |
-| **Format** | 10-minute pitch + 5-minute Q&A |
+| **Format** | **Preliminary round:** 7-minute pitch + 3-minute Q&A<br>**Final round:** 10-minute pitch + 5-minute Q&A |
 
 - The mandate covers all of BC; Metro Vancouver is the fund's preference. A recommendation elsewhere should say why.
 - **Simulation rule: ignore the principal residence requirement.** In real life, BC only allows short-term rentals in the host's own home (plus one secondary suite on the same property). That rule would stop an investor like DDD from buying properties just to rent them out short-term. For this case, assume the rule does not apply: DDD can buy properties purely to run as short-term rentals, and your job is to maximize the value of that investment. All other rules, such as business licences and provincial registration, still apply.
@@ -106,8 +106,8 @@ Every team works from the same Inside Airbnb Vancouver snapshot dated June 15, 2
 ---
 
 ### SECTION 5: Deliverables
-Two things are due: a 10-minute pitch and a GitHub repository that reproduces your numbers.
-- **Pitch (.pptx):** 10 minutes plus 5 minutes of Q&A. Lead with the recommendation, not the methodology. Mention your key decisions where they arise, and show your assumptions and how you validated your results. Put a decision log in the appendix that compiles your decisions (see How You Will Be Judged).
+Two things are due: a pitch (7 minutes in preliminary round, 10 minutes in final) and a GitHub repository that reproduces your numbers.
+- **Pitch (.pptx):** 7 minutes plus 3 minutes Q&A in preliminary round; 10 minutes plus 5 minutes Q&A in final round. Lead with the recommendation, not the methodology. Mention your key decisions where they arise, and show your assumptions and how you validated your results. Put a decision log in the appendix that compiles your decisions (see How You Will Be Judged).
 - **GitHub repository:** reproducible code that runs. A judge should be able to trace any number you present back to the line that produced it. The repo isn't scored; judges may use it to verify your numbers.
 - Q&A runs very quickly. We recommend keeping your key assumptions and the reasoning behind them on a slide, so they are easy to refer back to when answering questions.
 
