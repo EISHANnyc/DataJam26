@@ -61,20 +61,20 @@ neighbourhoods   & Bedroom Mix                  & Concentration  Cap Rate + Rang
 * **What judges need to see:** A single crisp return figure, backed by a clear financial definition (e.g., **Net Operating Income (NOI) Cap Rate**), with all assumptions transparently stated.
 * **How we answer it:**
   1. Define the metric:
-     $$\text{Net Cap Rate} = \frac{\text{Gross Revenue} - \text{Operating Expenses (OPEX)}}{\text{Total Purchase Price ($10M)}}$$
+     ```
+     Net Cap Rate = (Gross Rental Revenue - Operating Expenses) / Total Acquisition Capital ($10M)
+     ```
   2. Build a realistic 2027 Pro-Forma Cash Flow:
-     * **Gross Rental Revenue:** Estimated from cleaned calendar & review-adjusted occupancy.
-     * **Operating Expenses:**
-       * Airbnb platform fee (3%)
-       * Property management & guest turnover (~15%–18%)
-       * Cleaning fees (offset by guest cleaning charges)
-       * Strata / HOA maintenance fees
-       * City of Vancouver property taxes & municipal STR licensing fees
-       * Commercial insurance & utilities
-  3. Provide an honest uncertainty range:
-     * **Bear Case (Economic downturn / travel drop):** e.g., 5.4%
-     * **Base Case (Expected 2027):** e.g., 7.6%
-     * **Bull Case (High summer demand):** e.g., 9.1%
+     * **Gross Rental Revenue:** Calculated directly from cleaned Vancouver daily rates and review-adjusted occupancy.
+     * **Operating Expenses (Where the standard industry %s come from):**
+       * **Airbnb Host Fee (3%):** Standard global platform host fee charged by Airbnb on all bookings.
+       * **Full-Service Property Management (~15%–18%):** Typical local market rate in Metro Vancouver for third-party turnkey STR management companies (guest messaging, keyless check-in, restock, emergency dispatch).
+       * **Cleaning Fees (Net $0):** Paid directly by guests as a separate line item at checkout to pay professional turnover cleaners.
+       * **Strata / HOA Fees:** Monthly condo building maintenance and insurance reserve fund assessments (sourced from Vancouver MLS averages: ~$0.55–$0.70/sqft/month).
+       * **Property Taxes & City Licensing:** City of Vancouver residential mill rates (~$2.80 per $1,000 assessed value) + annual municipal STR business licence fee ($1,000+/year).
+       * **Utilities & Commercial Insurance:** Internet, hydro, and commercial STR liability rider.
+  3. Provide an honest uncertainty range (Base, Bear, and Bull cases):
+     * *Note: The exact final return numbers will be calculated by our Python analysis pipeline from the data. We will test sensitivity against conservative (Bear), realistic (Base), and peak-demand (Bull) market conditions.*
 * **Data needed:** Cleaned revenue calculations, realistic OPEX benchmarks, historical tourism seasonality curves.
 
 ---
