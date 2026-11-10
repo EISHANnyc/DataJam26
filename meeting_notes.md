@@ -1,14 +1,13 @@
 # DataJam 2026 — Team Meeting Notes
 **Date:** November 9, 2026  
-**Team Composition:** 4 Members (2 Statistics, 2 Computer Science)  
 
 ---
 
 ## 1. Meeting Overview & Agenda
-* Brief alignment & prompt review
+* prompt review
 * The 5 core questions we must answer
 * Division of roles & responsibilities
-* Next milestones & deadlines
+* Next things to do & deadlines
 
 ---
 
