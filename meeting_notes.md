@@ -23,21 +23,11 @@
 
 ---
 
-## 3. Team Member Dataset Ownership & Responsibilities
-* **Eishan:** 
-  * **Dataset:** `listings.csv.gz` (The primary Hub table).
-  * **Role:** Filter and clean core listings, extract the 24 key variables (property types, bedrooms, nightly prices, occupancy, revenue), and generate `listings_cleaned.csv`.
-* **Oliver:** 
-  * **Datasets:** `calendar.csv.gz` and `reviews.csv.gz`.
-  * **Role:** 
-    1. Analyze forward `calendar.csv.gz` for monthly seasonality (summer peak vs. winter dip in availability and price).
-    2. Filter `reviews.csv.gz` using the positive keyword dictionary to identify high-satisfaction property features and corroborate location picks.
-* **Bhuvanesh:** 
-  * **Datasets:** Supplementary CMHC datasets & CREA MLS acquisition data.
-  * **Role:** Extract benchmark purchase prices (Apartments ~$688k, Townhouses ~$1.03M, Detached ~$1.82M from `CREA_MLS_HPI_Benchmarks.xlsx`) and use CMHC vacancy/rent data to justify the STR revenue premium over long-term leases.
-* **Tory:** 
-  * **Dataset:** `neighbourhoods.geojson` & `neighbourhoods.csv`.
-  * **Role:** Spatial GIS mapping across Vancouver's 22 planning areas, preparing choropleth heatmap visualizations for the pitch deck.
+## 3. Team Member Action Items (Agreed)
+* **Eishan:** Clean `listings.csv.gz` to find average prices across neighbourhoods and average cost based on how many bed/bathrooms.
+* **Oliver:** Use `reviews.csv.gz` (and calendar) to create a library of listing IDs with good / bad reviews (create a dictionary of good / bad words, filter the comments, and group by listing ID).
+* **Bhuvanesh:** Look through supplementary datasets and outside sources to identify what is missing/needed, determine how to link datasets together, and find average purchase prices for property types (using the CREA benchmark data).
+* **Tory:** Look through `neighbourhoods.geojson` and `neighbourhoods.csv` to see if we can make a visual map of target areas or a heatmap of neighbourhoods where Airbnbs are located.
 
 ---
 
