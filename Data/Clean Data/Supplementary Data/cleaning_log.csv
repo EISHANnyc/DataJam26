@@ -1,0 +1,10 @@
+source_file,output_file,status,rows,columns,notes
+RentalMarketStatistics.csv,RentalMarketStatistics_clean.csv,cleaned,32.0,11.0,"Headers, blank rows, empty columns and text spaces cleaned."
+Vancouver-Price Percentiles for homwowner and condominium units.csv,Vancouver-Price Percentiles for homwowner and condominium units_clean.csv,cleaned,442.0,8.0,"Headers, blank rows, empty columns and text spaces cleaned."
+urban-rental-market-survey-data-number-units-building-size-2023-en.xlsx,urban-rental-market-survey-data-number-units-building-size-2023-en_clean.xlsx,cleaned,51634.0,11.0,Excel sheets cleaned using header row 4.
+urban-rental-market-survey-data-rent-quartiles-2023-en.xlsx,urban-rental-market-survey-data-rent-quartiles-2023-en_clean.xlsx,cleaned,17346.0,11.0,Excel sheets cleaned using header row 4.
+urban-rental-market-survey-data-vacancy-rates-rent-quartile-2023-en.xlsx,urban-rental-market-survey-data-vacancy-rates-rent-quartile-2023-en_clean.xlsx,cleaned,17326.0,13.0,Excel sheets cleaned using header row 5.
+average-median-price-unabsorbed-row-apartment-units-2023-en(outside Data).xlsx,average-median-price-unabsorbed-row-apartment-units-2023-en(outside Data)_clean.xlsx,cleaned,6252.0,16.0,Excel sheets cleaned using header row 5.
+absorbed-units-price-range-canada-provinces-all-dwelling-types-2026-q3-en(outside data).xlsx,absorbed-units-price-range-canada-provinces-all-dwelling-types-2026-q3-en(outside data)_clean.xlsx,cleaned,121.0,67.0,Excel sheets cleaned using header row 5.
+percentile-rents-urban-centres-pooled-small-centre-rental-market-2025-en.xlsx,,deferred,,,Multi-row headers and relevance to the selected market need review.
+Greater-Vancouver-benchmark-prices.pdf,,reference,,,Original PDF retained for reference; not converted into a table.
