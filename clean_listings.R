@@ -1,29 +1,24 @@
 # ==============================================================================
-# SFU DSSS DataJam 2026 - Data Cleaning Pipeline
+# SFU DSSS DataJam 2026
 # Task: Clean Inside Airbnb Vancouver (June 15, 2026) listings.csv.gz
-# Author: Eishan (Data Lead)
+# Eishan
 # ==============================================================================
 
 # 1. Load Required Libraries
-suppressPackageStartupMessages({
-  library(tidyverse)
-})
+library(tidyverse)
 
-cat("=== Step 1: Loading raw listings data ===\n")
-raw_path <- "data/listings.csv.gz"
-if (!file.exists(raw_path)) {
-  stop("Could not find data/listings.csv.gz. Make sure working directory is DataJam26.")
-}
+# Step 1: Loading raw listings data")
 
-raw_listings <- read_csv(raw_path, show_col_types = FALSE)
-cat("Loaded raw dataset:", nrow(raw_listings), "rows and", ncol(raw_listings), "columns.\n\n")
+raw_listings <- read_csv("data/listings.csv.gz")
+# nrow(raw_listings) 6509
+# ncol(raw_listings) 90
 
-# 2. Select the 24 Essential Columns Agreed by Team
+# 2. Select the columns we need to keep
 cols_to_keep <- c(
   "id", "name", "description",
   "hosts_time_as_user_years", "hosts_time_as_host_years", "host_location",
   "neighbourhood_cleansed", "property_type", "room_type",
-  "accommodates", "bathrooms", "bathrooms_text", "bedrooms", "beds", "amenities",
+  "accommodates", "bathrooms", "bedrooms", "beds", "amenities",
   "price", "price_quote_price_per_night", "minimum_nights",
   "availability_30", "availability_60", "availability_90", "availability_365",
   "number_of_reviews", "number_of_reviews_ltm", "reviews_per_month",
@@ -34,14 +29,11 @@ cols_to_keep <- c(
 df <- raw_listings %>% select(any_of(cols_to_keep))
 
 # 3. Clean Data Types
-cat("=== Step 2: Cleaning Data Types ===\n")
+# Cleaning data types
 df_cleaned <- df %>%
   mutate(
-    # Clean price: strip '$' and commas to convert to numeric
+    # Clean price: remove '$' and commas to convert to number
     price_clean = parse_number(price),
-    
-    # Extract numeric bathroom count from bathrooms_text (e.g. '1.5 baths' -> 1.5)
-    bathrooms_clean = coalesce(as.numeric(bathrooms), parse_number(bathrooms_text)),
     
     # Ensure numeric types
     bedrooms_clean = as.numeric(bedrooms),
@@ -51,40 +43,43 @@ df_cleaned <- df %>%
   )
 
 # 4. Apply Business & Investment Filters
-cat("=== Step 3: Applying Commercial Investment Filters ===\n")
+# Step 3: Applying Commercial Investment Filter
 commercial_str <- df_cleaned %>%
   filter(
-    # Filter 1: Commercial assets only (Entire home/apt)
+    # Filter 1:  NO private rooms or shared roomsy (So only Entire home/apt)
     room_type == "Entire home/apt",
     
     # Filter 2: True short-term rentals (<= 30 nights)
+    ## In Vancouver, under 30 days is a short term rental, which is what our business is running
     minimum_nights <= 30,
     
-    # Filter 3: Price bounds (remove $0 test listings and extreme $2500+ outliers)
+    # Filter 3: Price limits (remove $0 listings and $2500+ outliers)
     price_clean >= 40 & price_clean <= 2500
   )
 
-cat("Commercial STR listings after filtering:", nrow(commercial_str), 
-    paste0("(", round(nrow(commercial_str)/nrow(raw_listings)*100, 1), "% of total)\n\n"))
+# Commercial STR listings after filtering:"
+nrow(commercial_str)
+nrow(commercial_str) / nrow(df_cleaned)
+# 58% of original listings are left!
 
 # 5. Generate Summary Table 1: Performance Across 22 Neighbourhoods
-cat("=== Table 1: Top 10 Neighbourhoods by Listing Count ===\n")
+# Table 1: Top 10 Neighbourhoods by Listing Count
 neighbourhood_summary <- commercial_str %>%
   group_by(neighbourhood = neighbourhood_cleansed) %>%
-  summarise(
-    total_listings       = n(),
+  summarize(
+    total_listings = n(),
     median_nightly_price = round(median(price_clean, na.rm = TRUE), 2),
-    mean_nightly_price   = round(mean(price_clean, na.rm = TRUE), 2),
-    avg_occupancy_days   = round(mean(estimated_occupancy_l365d, na.rm = TRUE), 1),
-    avg_annual_revenue   = round(mean(estimated_revenue_l365d, na.rm = TRUE), 0)
+    mean_nightly_price = round(mean(price_clean, na.rm = TRUE), 2),
+    avg_occupancy_days = round(mean(estimated_occupancy_l365d, na.rm = TRUE), 1),
+    avg_annual_revenue = round(mean(estimated_revenue_l365d, na.rm = TRUE), 0)
   ) %>%
   arrange(desc(total_listings))
 
-print(head(neighbourhood_summary, 10))
+View(neighbourhood_summary)
 
 # 6. Generate Summary Table 2: Performance by Neighbourhood x Bedrooms
-cat("\n=== Table 2: Bedroom Performance in Core Target Submarkets ===\n")
-target_neighbourhoods <- c("Downtown", "West End", "Kitsilano", "Mount Pleasant", "Downtown Eastside")
+# Table 2: Bedroom Performance in Core Target Neighbourhoods
+target_neighbourhoods <- c("Downtown", "Shaughnessy", "Strathcona", "Oakridge", "Kitsilano", "Downtown Eastside", "Fairview")
 
 bedroom_summary <- commercial_str %>%
   filter(
@@ -100,9 +95,8 @@ bedroom_summary <- commercial_str %>%
   ) %>%
   arrange(neighbourhood, bedrooms)
 
-print(bedroom_summary)
+View(bedroom_summary)
 
 # 7. Export Clean Dataset
 output_path <- "data/listings_cleaned.csv"
 write_csv(commercial_str, output_path)
-cat("\n=== Successfully saved cleaned dataset to", output_path, "===\n")
