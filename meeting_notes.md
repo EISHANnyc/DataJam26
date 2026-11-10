@@ -24,12 +24,16 @@
 
 ---
 
-## 3. Agreed Action Items & Ownership
-* [x] **Core Missing Data Identified:**
-  * **Property Sale / Acquisition Prices:** Real estate benchmark purchase prices for 1-bed/2-bed condos and townhomes across Vancouver submarkets (needed to calculate how many units $10M buys and the Cap Rate).
-  * **Operating Costs:** Fixed expense modeling (Airbnb platform fee, property management, strata/HOA fees, property tax, licensing).
-* [x] **Decision Log Entry Formulated (Decision #2):**
-  * **Topic:** Modeling Operating Costs via Fixed Benchmark Percentages.
-  * **What:** Assume fixed industry-standard percentages for operating expenses rather than arbitrary flat dollar amounts.
-  * **Why:** Turnkey property management (15%–18%) and Airbnb host fees (3%) scale dynamically with revenue; strata and taxes scale with property assessed value.
-* [ ] **Next Step (Data Cleaning):** Filter and prune `listings.csv.gz` to the essential columns and commercially viable rows.
+## 3. Team Member Dataset Ownership & Responsibilities
+* **Eishan:** 
+  * **Dataset:** `listings.csv.gz` (The primary Hub table).
+  * **Role:** Filter and clean core listings, extract key variables (property types, bedrooms, nightly prices, occupancy, revenue), and generate `listings_cleaned.csv`.
+* **Oliver:** 
+  * **Datasets:** `calendar.csv.gz` and `reviews.csv.gz`.
+  * **Role:** Analyze daily forward calendar for seasonal price variations (summer peak vs. winter dip) and analyze historical reviews as a proxy for completed guest stays.
+* **Bhuvanesh:** 
+  * **Datasets:** Supplementary CMHC datasets & missing acquisition data.
+  * **Role:** Evaluate CMHC rental market surveys (vacancy rates by quartile, median rents vs. STR revenue), and integrate CREA MLS property acquisition benchmark prices.
+* **Tory:** 
+  * **Dataset:** `neighbourhoods.geojson` & `neighbourhoods.csv`.
+  * **Role:** Explore spatial/GIS mapping across Vancouver's 22 planning areas, determine boundary overlays, and prepare choropleth heatmap visualizations for the pitch deck.
