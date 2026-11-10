@@ -25,6 +25,11 @@
 ---
 
 ## 3. Agreed Action Items & Ownership
-* [ ] **Joint:** Complete data cleaning across the core Inside Airbnb datasets.
-* [ ] **Individual:** Each member independently develops their approach to the 5 core questions (Where, What, How Many, Return %, Risks).
-* [ ] **Group Review:** Reconvene to cross-examine and unify the best answers.
+* [x] **Core Missing Data Identified:**
+  * **Property Sale / Acquisition Prices:** Real estate benchmark purchase prices for 1-bed/2-bed condos and townhomes across Vancouver submarkets (needed to calculate how many units $10M buys and the Cap Rate).
+  * **Operating Costs:** Fixed expense modeling (Airbnb platform fee, property management, strata/HOA fees, property tax, licensing).
+* [x] **Decision Log Entry Formulated (Decision #2):**
+  * **Topic:** Modeling Operating Costs via Fixed Benchmark Percentages.
+  * **What:** Assume fixed industry-standard percentages for operating expenses rather than arbitrary flat dollar amounts.
+  * **Why:** Turnkey property management (15%–18%) and Airbnb host fees (3%) scale dynamically with revenue; strata and taxes scale with property assessed value.
+* [ ] **Next Step (Data Cleaning):** Filter and prune `listings.csv.gz` to the essential columns and commercially viable rows.
