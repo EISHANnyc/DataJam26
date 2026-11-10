@@ -27,13 +27,50 @@
 ## 3. Team Member Dataset Ownership & Responsibilities
 * **Eishan:** 
   * **Dataset:** `listings.csv.gz` (The primary Hub table).
-  * **Role:** Filter and clean core listings, extract key variables (property types, bedrooms, nightly prices, occupancy, revenue), and generate `listings_cleaned.csv`.
+  * **Role:** Filter and clean core listings, extract the 24 key variables (property types, bedrooms, nightly prices, occupancy, revenue), and generate `listings_cleaned.csv`.
 * **Oliver:** 
   * **Datasets:** `calendar.csv.gz` and `reviews.csv.gz`.
-  * **Role:** Analyze daily forward calendar for seasonal price variations (summer peak vs. winter dip) and analyze historical reviews as a proxy for completed guest stays.
+  * **Role:** 
+    1. Analyze forward `calendar.csv.gz` for monthly seasonality (summer peak vs. winter dip in availability and price).
+    2. Filter `reviews.csv.gz` using the positive keyword dictionary to identify high-satisfaction property features and corroborate location picks.
 * **Bhuvanesh:** 
-  * **Datasets:** Supplementary CMHC datasets & missing acquisition data.
-  * **Role:** Evaluate CMHC rental market surveys (vacancy rates by quartile, median rents vs. STR revenue), and integrate CREA MLS property acquisition benchmark prices.
+  * **Datasets:** Supplementary CMHC datasets & CREA MLS acquisition data.
+  * **Role:** Extract benchmark purchase prices (Apartments ~$688k, Townhouses ~$1.03M, Detached ~$1.82M from `CREA_MLS_HPI_Benchmarks.xlsx`) and use CMHC vacancy/rent data to justify the STR revenue premium over long-term leases.
 * **Tory:** 
   * **Dataset:** `neighbourhoods.geojson` & `neighbourhoods.csv`.
-  * **Role:** Explore spatial/GIS mapping across Vancouver's 22 planning areas, determine boundary overlays, and prepare choropleth heatmap visualizations for the pitch deck.
+  * **Role:** Spatial GIS mapping across Vancouver's 22 planning areas, preparing choropleth heatmap visualizations for the pitch deck.
+
+---
+
+## 4. File Schemas & Formatting (Calendar & Reviews)
+
+### `calendar.csv.gz`
+* **Columns:** `['listing_id', 'date', 'available', 'minimum_nights', 'maximum_nights']`
+* **Key formatting notes:**
+  * `listing_id`: Joins to `listings.id`.
+  * `date`: YYYY-MM-DD format (June 15, 2026 to June 14, 2027).
+  * `available`: `'t'` for available, `'f'` for unavailable/booked.
+
+### `reviews.csv.gz`
+* **Columns:** `['listing_id', 'id', 'date', 'reviewer_id', 'reviewer_name', 'comments']`
+* **Key formatting notes:**
+  * `listing_id`: Joins to `listings.id`.
+  * `comments`: Raw text string of guest review feedback.
+
+---
+
+## 5. Review Sentiment Dictionary (Positive Value-Drivers)
+Filter comments for these high-value keywords to identify what drives top guest willingness-to-pay:
+* **Location & Walkability:** `"walkable"`, `"walking distance"`, `"location"`, `"skytrain"`, `"transit"`, `"seawall"`, `"restaurants"`, `"close to everything"`
+* **Unit Quality & Views:** `"clean"`, `"spotless"`, `"view"`, `"modern"`, `"quiet"`, `"comfortable"`, `"balcony"`
+* **Corporate / Business Travel:** `"fast wifi"`, `"desk"`, `"work"`, `"easy check-in"`, `"conference"`
+* **Family / Group Appeal:** `"family"`, `"spacious"`, `"well equipped"`, `"kitchen"`, `"parking"`
+* **Customer Loyalty / Superhost:** `"definitely stay again"`, `"highly recommend"`, `"perfect stay"`
+
+---
+
+## 6. Current Action Items Checklist
+* [ ] **Eishan:** Run the cleaning script on `listings.csv.gz` (filter `Entire home/apt`, `minimum_nights <= 30`, clean prices) to produce the neighbourhood revenue table.
+* [ ] **Oliver:** Pull monthly availability % from `calendar.csv.gz` and run the keyword search on `reviews.csv.gz`.
+* [ ] **Bhuvanesh:** Finalize the purchase price denominator table from `CREA_MLS_HPI_Benchmarks.xlsx`.
+* [ ] **Tory:** Load `neighbourhoods.geojson` into Python/R to test joining with neighbourhood names for mapping.
