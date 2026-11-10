@@ -1,0 +1,15 @@
+# R session files
+.RData
+.Rhistory
+.Rproj.user/
+.Renviron
+
+# Python / virtual environment files
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS temporary files
+.DS_Store
+Thumbs.db
