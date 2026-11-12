@@ -1,4 +1,4 @@
-price_scenario,revenue_basis,management_scenario,apartments,houses,total_properties,partial_operating_income,deployed_capital,remaining_budget,yield_on_deployed,largest_unit_type,largest_unit_income,largest_unit_share_pct
+price_scenario,revenue_basis,management_scenario,apartments,houses,total_properties,partial_operating_income,deployed_capital,remaining_budget,yield_on_deployed,largest_property_type,largest_property_type_income,largest_property_type_share_pct
 GVR Average,all,Best,0,1,1,8557.797511999997,2300856.0,7699144.0,0.0037193972643224946,House,8557.797511999997,100.0
 GVR Average,all,Best,0,2,2,17115.595023999995,4601712.0,5398288.0,0.0037193972643224946,House,17115.595023999995,100.0
 GVR Average,all,Best,0,3,3,25673.392535999992,6902568.0,3097432.0,0.0037193972643224946,House,25673.392535999992,100.0

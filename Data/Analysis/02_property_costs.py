@@ -1,3 +1,4 @@
+
 import pandas as pd
 from pathlib import Path
 
@@ -10,6 +11,7 @@ BUDGET = 10_000_000
 
 # Set the property tax rate
 PROPERTY_TAX_RATE = 0.00336394
+
 
 # Calculate BC Property Transfer Tax
 def calculate_ptt(price):
@@ -33,24 +35,23 @@ def calculate_ptt(price):
 
 
 # Set property purchase price assumptions
-# GVR prices are benchmark prices, not guaranteed purchase prices
-# GVR Average is a simple midpoint of East and West benchmarks
+# GVR prices are benchmark prices, not guaranteed purchase prices.
+# GVR Average is a simple midpoint of East and West benchmarks.
 property_prices = {
     "Apartment": {
         "GVR East": 635_100,
         "GVR West": 751_400,
-        "GVR Average": (635_100 + 751_400) / 2,
-        "CMHC": 1_800_000
+        "GVR Average": (635_100 + 751_400) / 2
     },
     "House": {
         "GVR East": 1_610_700,
         "GVR West": 2_899_700,
-        "GVR Average": (1_610_700 + 2_899_700) / 2,
-        "CMHC": 2_221_250
+        "GVR Average": (1_610_700 + 2_899_700) / 2
     }
 }
 
-# Calculate acquisition costs for each property type and price scenario
+
+# Calculate acquisition costs for each property type and GVR price scenario
 results = []
 
 for property_type, scenarios in property_prices.items():
@@ -58,8 +59,8 @@ for property_type, scenarios in property_prices.items():
 
         ptt = calculate_ptt(purchase_price)
 
-        # Acquisition cost includes purchase price and PTT only
-        # It excludes legal fees, inspections, furnishing and setup
+        # Acquisition cost includes purchase price and PTT only.
+        # It excludes legal fees, inspections, furnishing and setup.
         all_in_cost = purchase_price + ptt
 
         affordable_units = int(BUDGET // all_in_cost)
@@ -78,6 +79,7 @@ for property_type, scenarios in property_prices.items():
             "deployed_capital": deployed_capital,
             "remaining_budget": remaining_budget
         })
+
 
 # Create the results table
 property_costs = pd.DataFrame(results)
