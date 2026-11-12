@@ -1,0 +1,10 @@
+property_group,bedroom_group,listing_count,median_revenue,mean_revenue
+Apartment,1 bedroom,777,36720.0,44716.91763191763
+Apartment,2 bedrooms,574,38394.0,54063.34668989547
+Apartment,3+ bedrooms,170,58662.0,71270.36470588236
+House,1 bedroom,267,27320.0,31738.861423220973
+House,2 bedrooms,482,23670.0,36252.446058091286
+House,3+ bedrooms,665,20412.0,46768.70676691729
+Townhouse,1 bedroom,2,41473.5,41473.5
+Townhouse,2 bedrooms,12,27630.0,47349.5
+Townhouse,3+ bedrooms,31,33984.0,53096.32258064516
