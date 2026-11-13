@@ -1,0 +1,69 @@
+neighbourhood,bedrooms,earning_listings,median_price,median_revenue,enough_data
+Arbutus Ridge,1.0,17,293.0,46752.0,False
+Arbutus Ridge,2.0,23,355.0,29484.0,False
+Arbutus Ridge,3.0,8,489.0,45608.0,False
+Downtown,1.0,361,411.0,52346.0,True
+Downtown,2.0,299,544.0,63087.0,True
+Downtown,3.0,110,581.0,68176.0,True
+Downtown Eastside,1.0,159,360.0,40860.0,True
+Downtown Eastside,2.0,97,536.0,41376.0,True
+Downtown Eastside,3.0,19,528.0,73620.0,False
+Dunbar Southlands,1.0,24,294.0,54232.0,False
+Dunbar Southlands,2.0,54,325.0,24676.0,True
+Dunbar Southlands,3.0,19,387.0,18720.0,False
+Fairview,1.0,4,379.0,41043.0,False
+Fairview,2.0,8,524.0,44822.0,False
+Fairview,3.0,4,554.0,61730.0,False
+Grandview-Woodland,1.0,51,280.0,40749.0,True
+Grandview-Woodland,2.0,42,380.0,32544.0,True
+Grandview-Woodland,3.0,24,520.0,32789.0,False
+Hastings-Sunrise,1.0,57,263.0,33178.0,True
+Hastings-Sunrise,2.0,68,305.0,39024.0,True
+Hastings-Sunrise,3.0,29,509.0,51881.0,False
+Kensington-Cedar Cottage,1.0,77,241.0,39720.0,True
+Kensington-Cedar Cottage,2.0,74,351.0,36122.0,True
+Kensington-Cedar Cottage,3.0,44,478.0,45837.0,True
+Kerrisdale,1.0,8,283.0,34184.0,False
+Kerrisdale,2.0,14,343.0,64952.0,False
+Kerrisdale,3.0,14,438.0,17124.0,False
+Killarney,1.0,17,227.0,23220.0,False
+Killarney,2.0,30,304.0,24302.0,True
+Killarney,3.0,18,450.0,24900.0,False
+Kitsilano,1.0,73,381.0,50293.0,True
+Kitsilano,2.0,90,510.0,48518.0,True
+Kitsilano,3.0,34,722.0,38372.0,True
+Marpole,1.0,25,215.0,32762.0,False
+Marpole,2.0,23,307.0,32058.0,False
+Marpole,3.0,18,468.0,37965.0,False
+Mount Pleasant,1.0,74,357.0,32612.0,True
+Mount Pleasant,2.0,36,459.0,39670.0,True
+Mount Pleasant,3.0,11,623.0,11496.0,False
+Oakridge,1.0,5,331.0,18912.0,False
+Oakridge,2.0,21,364.0,19117.0,False
+Oakridge,3.0,10,466.0,23856.0,False
+Renfrew-Collingwood,1.0,58,241.0,35584.0,True
+Renfrew-Collingwood,2.0,68,328.0,30048.0,True
+Renfrew-Collingwood,3.0,28,423.0,48072.0,False
+Riley Park,1.0,53,318.0,44944.0,True
+Riley Park,2.0,60,413.0,45942.0,True
+Riley Park,3.0,34,569.0,31365.0,True
+Shaughnessy,1.0,11,269.0,27320.0,False
+Shaughnessy,2.0,7,418.0,25200.0,False
+Shaughnessy,3.0,4,771.0,79086.0,False
+South Cambie,1.0,8,332.0,43258.0,False
+South Cambie,2.0,13,445.0,69839.0,False
+South Cambie,3.0,4,748.0,60250.0,False
+Strathcona,1.0,8,406.0,83406.0,False
+Strathcona,2.0,3,419.0,8220.0,False
+Sunset,1.0,42,239.0,22657.0,True
+Sunset,2.0,44,308.0,30278.0,True
+Sunset,3.0,23,451.0,13086.0,False
+Victoria-Fraserview,1.0,33,232.0,25608.0,True
+Victoria-Fraserview,2.0,40,309.0,34611.0,True
+Victoria-Fraserview,3.0,33,403.0,44847.0,True
+West End,1.0,44,407.0,34512.0,True
+West End,2.0,27,486.0,53466.0,False
+West End,3.0,5,612.0,113739.0,False
+West Point Grey,1.0,14,294.0,29119.0,False
+West Point Grey,2.0,22,413.0,35612.0,False
+West Point Grey,3.0,12,761.0,41116.0,False

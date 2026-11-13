@@ -1,0 +1,23 @@
+neighbourhood,rank_le_7,rank_le_14,rank_le_30,rank_le_60,rank_le_90
+Downtown,1.0,1.0,1.0,1.0,1.0
+Kitsilano,2.0,2.0,2.0,2.0,5.0
+Riley Park,3.0,3.0,3.0,3.0,2.0
+South Cambie,4.0,4.0,4.0,4.0,4.0
+Downtown Eastside,5.0,5.0,5.0,5.0,3.0
+Hastings-Sunrise,6.0,6.0,6.0,6.0,6.0
+Mount Pleasant,7.0,7.0,7.0,7.0,20.0
+West End,9.0,9.0,8.0,8.0,17.0
+Kensington-Cedar Cottage,8.0,8.0,9.0,9.0,7.0
+Arbutus Ridge,10.0,10.0,10.0,10.0,8.0
+Marpole,11.0,11.0,11.0,11.0,9.0
+Grandview-Woodland,12.0,12.0,12.0,12.0,13.0
+West Point Grey,13.0,13.0,13.0,13.0,14.0
+Renfrew-Collingwood,14.0,14.0,14.0,14.0,11.0
+Kerrisdale,15.0,15.0,15.0,15.0,10.0
+Dunbar Southlands,16.0,16.0,16.0,16.0,15.0
+Victoria-Fraserview,17.0,17.0,17.0,17.0,12.0
+Oakridge,18.0,18.0,18.0,18.0,16.0
+Sunset,19.0,19.0,19.0,19.0,18.0
+Shaughnessy,20.0,20.0,20.0,20.0,19.0
+Killarney,21.0,21.0,21.0,21.0,21.0
+Fairview,,,,,22.0

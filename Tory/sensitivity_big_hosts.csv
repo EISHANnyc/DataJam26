@@ -1,0 +1,24 @@
+neighbourhood,active_listings_all,median_revenue_all,active_listings_no_big_host,median_revenue_no_big_host,rank_all,rank_no_big_host,rank_change
+Arbutus Ridge,67,38340.0,64,38682.0,12.0,13.0,-1.0
+Downtown,806,58684.0,758,58684.0,2.0,2.0,0.0
+Downtown Eastside,292,44108.0,277,42252.0,7.0,8.0,-1.0
+Dunbar Southlands,127,32886.0,118,35619.0,18.0,18.0,0.0
+Fairview,18,45239.0,16,43818.0,5.0,6.0,-1.0
+Grandview-Woodland,129,36000.0,125,36399.0,14.0,16.0,-2.0
+Hastings-Sunrise,177,42437.0,175,42437.0,8.0,7.0,1.0
+Kensington-Cedar Cottage,217,40741.0,210,40948.0,11.0,9.0,2.0
+Kerrisdale,47,34173.0,40,37158.0,17.0,15.0,2.0
+Killarney,73,24960.0,69,24960.0,23.0,23.0,0.0
+Kitsilano,223,47508.0,216,47594.0,3.0,3.0,0.0
+Marpole,82,38152.0,78,39142.0,13.0,11.0,2.0
+Mount Pleasant,134,41763.0,129,37231.0,9.0,14.0,-5.0
+Oakridge,53,29070.0,50,28737.0,20.0,21.0,-1.0
+Renfrew-Collingwood,168,34530.0,163,36154.0,16.0,17.0,-1.0
+Riley Park,164,45942.0,161,46920.0,4.0,4.0,0.0
+Shaughnessy,39,27555.0,34,38864.0,22.0,12.0,10.0
+South Cambie,30,44913.0,29,46581.0,6.0,5.0,1.0
+Strathcona,14,64001.0,14,64001.0,1.0,1.0,0.0
+Sunset,125,27936.0,124,28158.0,21.0,22.0,-1.0
+Victoria-Fraserview,123,32209.0,119,32487.0,19.0,20.0,-1.0
+West End,82,41136.0,81,40608.0,10.0,10.0,0.0
+West Point Grey,65,35338.0,59,35380.0,15.0,19.0,-4.0
