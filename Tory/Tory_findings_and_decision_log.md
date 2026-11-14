@@ -93,5 +93,3 @@ About 83.5% of entire homes (3,255 of 3,900) have revenue above 0. Downtown 806 
 - Do the Q3/Q4 revenue totals trace to one source rather than a typed-in number?
 - Are purchase prices set by neighbourhood and bedroom count, or one price for every unit?
 
-## 8. AI assistance (for the pitch disclosure)
-An AI assistant (Claude) helped write and debug `make_map.py` and `make_static_maps.py` and drafted this document. Every number was checked against script output. Anyone presenting these figures should be able to explain how they were produced.
