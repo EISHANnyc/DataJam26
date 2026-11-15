@@ -26,6 +26,8 @@ DataJam 2026, Vancouver short-term rental case. Data: Inside Airbnb, Vancouver, 
 
 Note: 5 of these 3,900 entire homes have no minimum_nights value. The 30-night filter removes only values above 30, so it keeps them. The cutoff test (`minnights_cutoff_test.csv`) uses `<= n`, which drops them, so it shows 3,895 listings at 30 nights instead of 3,900. The top three are the same either way.
 
+Cross-check with the team's cleaned file (`Data/Clean Data/listings_cleaned.csv`, 3,786 listings): it applies the same entire-home and 30-night rules but keeps only nightly prices from $40 to $2,500 and drops listings with no price. That window removes 109 of our 3,900, leaving 3,791; the other 5 are most likely the listings with a missing minimum_nights, which the team's R filter drops. Neighbourhood medians agree within 2% (Downtown $58,644 vs our $58,684, Kitsilano $47,044 vs $47,508, Riley Park $45,220 vs $45,942) and the top three are the same.
+
 Revenue statistics use only listings with estimated revenue above 0 (3,255 of 3,900, about 84%). 24 polygon rows dissolve to 23 names because Strathcona appears twice in the geojson; the brief says 22 local planning areas, so be ready to explain the extra name.
 
 ## 3. Decision log
@@ -66,16 +68,20 @@ Revenue statistics use only listings with estimated revenue above 0 (3,255 of 3,
 - **Exception:** Mount Pleasant drops from 9th to 14th without large operators, so it's not a safe pick.
 - Present as tiers, not exact ranks (4th to 8th move by a few places). Round to the nearest $1k.
 
-### Finding 2: Bigger units charge more but earn only slightly more
-| Bedrooms | Earning listings | Median nightly price | Median annual revenue |
-|---|---|---|---|
-| 1 | 1,223 | $342 | $41.1k |
-| 2 | 1,163 | $419 | $41.2k |
-| 3 | 505 | $514 | $44.6k |
+### Finding 2: Revenue by bedroom count depends on the neighbourhood
+| Area | Bedrooms | Earning listings | Median nightly price | Median annual revenue |
+|---|---|---|---|---|
+| Downtown | 1 | 361 | $411 | $52.3k |
+| Downtown | 2 | 299 | $544 | $63.1k |
+| Downtown | 3 | 110 | $581 | $68.2k |
+| Kitsilano | 1 | 73 | $381 | $50.3k |
+| Kitsilano | 2 | 90 | $510 | $48.5k |
+| Kitsilano | 3 | 34 | $722 | $38.4k |
 
-- Revenue / price gives roughly 120, 98 and 87 booked nights a year (ratio of medians, rough).
-- A 3-bedroom earns about 8% more than a 1-bedroom. Unless it costs under about 8% more to buy, return per dollar is worse. Points toward more, smaller units, but only purchase prices (Bhuvanesh's CREA table) can settle it.
-- City-wide median mixes locations; check `neighbourhood_bedroom_summary.csv` before relying on it.
+- In Downtown, revenue rises with size: a 2-bedroom earns about 21% more than a 1-bedroom and a 3-bedroom about 30% more. In Kitsilano it falls: the 1-bedroom earns the most, and the 3-bedroom (only 34 listings) earns about 24% less.
+- The citywide pooled medians ($41.1k for 1-bed, $41.2k for 2-bed, $44.6k for 3-bed) look flat only because they mix neighbourhoods, so they are not used for the recommendation. We tested this by splitting by neighbourhood, and the flat pattern did not hold in Downtown.
+- Whether a bigger unit pays depends on its purchase price (Bhuvanesh's CREA table). Eishan's pro forma uses Downtown 2-bed $62,647 and 1-bed $49,153, Kitsilano 2-bed $50,010 and 1-bed $50,535, which are within about 6% of the medians above.
+- Cells with fewer than 30 earning listings are flagged `enough_data = False` in `neighbourhood_bedroom_summary.csv`; Kitsilano 3-bed has 34, which is only just enough.
 
 ## 5. Risk flag: not every listing earns
 About 83.5% of entire homes (3,255 of 3,900) have revenue above 0. Downtown 806 of 939 (86%), Kitsilano 223 of 268 (83%). Medians here are conditional on earning something, so a new unit has roughly a one-in-six chance of looking like a non-earner. Any expected-return figure should multiply by the earning share or explain why a professionally run unit does better. Applying about 85% to a 13-unit Downtown/Kitsilano portfolio moves a ~4.1% net cap rate to roughly 3.2% (my own calculation from the team's pro forma; rerun it in the team's code before using it).
@@ -92,4 +98,3 @@ About 83.5% of entire homes (3,255 of 3,900) have revenue above 0. Downtown 806 
 - Are the Q3 per-unit revenues means or medians, and do they include zero-revenue listings?
 - Do the Q3/Q4 revenue totals trace to one source rather than a typed-in number?
 - Are purchase prices set by neighbourhood and bedroom count, or one price for every unit?
-
