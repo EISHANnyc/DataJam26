@@ -1,0 +1,177 @@
+"neighbourhood_cleansed","property_type","bedrooms_clean","number_of_bad_reviews","unique_properties"
+"Downtown","Entire rental unit",2,57,35
+"Downtown","Entire condo",2,48,29
+"Downtown","Entire rental unit",1,47,31
+"Downtown","Entire condo",1,42,29
+"Downtown Eastside","Entire rental unit",1,33,22
+"Downtown Eastside","Entire loft",1,23,11
+"Downtown Eastside","Entire condo",1,16,10
+"Downtown Eastside","Entire condo",2,16,9
+"Downtown Eastside","Entire rental unit",2,11,8
+"Downtown","Entire rental unit",3,9,5
+"Kitsilano","Entire home",2,8,8
+"Downtown Eastside","Entire condo",NA,7,1
+"Dunbar Southlands","Entire guest suite",2,7,4
+"Kensington-Cedar Cottage","Entire guest suite",1,7,5
+"Kensington-Cedar Cottage","Entire guest suite",5,7,1
+"Kerrisdale","Entire home",3,7,4
+"Dunbar Southlands","Entire home",2,6,5
+"Hastings-Sunrise","Entire guest suite",2,6,5
+"Riley Park","Entire home",3,6,5
+"Sunset","Entire home",1,6,5
+"Sunset","Entire home",4,6,3
+"Victoria-Fraserview","Entire home",4,6,3
+"Downtown","Entire condo",3,5,4
+"Hastings-Sunrise","Entire home",3,5,5
+"Kitsilano","Entire condo",2,5,1
+"Mount Pleasant","Entire rental unit",1,5,4
+"Renfrew-Collingwood","Entire guest suite",1,5,3
+"Riley Park","Entire guest suite",1,5,4
+"West End","Entire rental unit",1,5,5
+"Downtown","Entire condo",4,4,2
+"Downtown","Entire serviced apartment",NA,4,1
+"Kitsilano","Entire condo",1,4,2
+"Kitsilano","Entire guest suite",1,4,3
+"Kitsilano","Entire guest suite",NA,4,1
+"Marpole","Entire guest suite",2,4,1
+"Marpole","Entire guesthouse",1,4,1
+"Mount Pleasant","Entire loft",1,4,2
+"Renfrew-Collingwood","Entire home",3,4,3
+"Riley Park","Entire home",2,4,4
+"Sunset","Entire home",2,4,4
+"Arbutus Ridge","Entire home",5,3,3
+"Downtown","Entire serviced apartment",4,3,1
+"Downtown Eastside","Entire condo",3,3,2
+"Downtown Eastside","Entire home",3,3,2
+"Downtown Eastside","Entire rental unit",3,3,2
+"Dunbar Southlands","Entire guest suite",1,3,3
+"Grandview-Woodland","Entire home",2,3,3
+"Grandview-Woodland","Entire home",3,3,2
+"Hastings-Sunrise","Entire home",1,3,2
+"Kensington-Cedar Cottage","Entire condo",1,3,2
+"Kensington-Cedar Cottage","Entire guest suite",2,3,3
+"Kensington-Cedar Cottage","Entire home",1,3,3
+"Kensington-Cedar Cottage","Entire home",3,3,3
+"Kitsilano","Entire home",3,3,3
+"Kitsilano","Entire home",4,3,2
+"Marpole","Entire home",1,3,3
+"Marpole","Entire home",4,3,2
+"Mount Pleasant","Entire home",1,3,2
+"Renfrew-Collingwood","Entire home",2,3,3
+"Strathcona","Entire loft",NA,3,1
+"Sunset","Entire home",5,3,1
+"Victoria-Fraserview","Entire home",6,3,2
+"West Point Grey","Entire home",3,3,2
+"Arbutus Ridge","Entire guest suite",2,2,1
+"Arbutus Ridge","Entire guest suite",NA,2,1
+"Arbutus Ridge","Entire home",1,2,1
+"Downtown","Entire loft",1,2,2
+"Downtown","Entire loft",2,2,1
+"Downtown","Entire serviced apartment",1,2,2
+"Downtown Eastside","Entire guest suite",2,2,1
+"Downtown Eastside","Entire guesthouse",1,2,1
+"Downtown Eastside","Entire loft",NA,2,2
+"Dunbar Southlands","Entire home",4,2,1
+"Dunbar Southlands","Tiny home",1,2,1
+"Fairview","Entire townhouse",2,2,1
+"Grandview-Woodland","Entire guest suite",1,2,2
+"Grandview-Woodland","Entire guest suite",2,2,2
+"Hastings-Sunrise","Entire guest suite",1,2,2
+"Hastings-Sunrise","Entire guest suite",4,2,1
+"Hastings-Sunrise","Entire guest suite",NA,2,2
+"Hastings-Sunrise","Entire home",2,2,2
+"Killarney","Entire guest suite",1,2,1
+"Killarney","Entire home",2,2,1
+"Kitsilano","Entire guest suite",2,2,2
+"Kitsilano","Entire home",1,2,1
+"Mount Pleasant","Entire home",3,2,2
+"Oakridge","Entire guest suite",2,2,2
+"Oakridge","Entire home",6,2,2
+"Renfrew-Collingwood","Entire home",1,2,2
+"Riley Park","Entire home",1,2,2
+"Sunset","Entire home",3,2,2
+"Victoria-Fraserview","Entire guest suite",1,2,1
+"Victoria-Fraserview","Entire home",2,2,2
+"Victoria-Fraserview","Entire home",3,2,2
+"West End","Entire condo",2,2,2
+"West End","Entire guesthouse",1,2,1
+"West End","Entire home",NA,2,1
+"Arbutus Ridge","Entire guest suite",3,1,1
+"Arbutus Ridge","Entire home",3,1,1
+"Downtown","Entire home",1,1,1
+"Downtown","Entire loft",NA,1,1
+"Downtown","Entire rental unit",4,1,1
+"Downtown","Entire serviced apartment",2,1,1
+"Downtown","Tower",3,1,1
+"Downtown Eastside","Entire loft",2,1,1
+"Dunbar Southlands","Entire guest suite",3,1,1
+"Dunbar Southlands","Entire home",3,1,1
+"Dunbar Southlands","Entire home",5,1,1
+"Dunbar Southlands","Entire rental unit",2,1,1
+"Dunbar Southlands","Entire villa",4,1,1
+"Fairview","Entire rental unit",2,1,1
+"Fairview","Entire townhouse",NA,1,1
+"Grandview-Woodland","Entire guest suite",4,1,1
+"Grandview-Woodland","Entire guest suite",NA,1,1
+"Grandview-Woodland","Entire home",1,1,1
+"Grandview-Woodland","Entire loft",1,1,1
+"Grandview-Woodland","Entire rental unit",2,1,1
+"Grandview-Woodland","Entire townhouse",1,1,1
+"Grandview-Woodland","Entire townhouse",3,1,1
+"Hastings-Sunrise","Entire condo",2,1,1
+"Hastings-Sunrise","Entire guesthouse",2,1,1
+"Hastings-Sunrise","Entire home",4,1,1
+"Hastings-Sunrise","Entire rental unit",NA,1,1
+"Kensington-Cedar Cottage","Entire guest suite",3,1,1
+"Kensington-Cedar Cottage","Entire guesthouse",2,1,1
+"Kensington-Cedar Cottage","Entire home",2,1,1
+"Kensington-Cedar Cottage","Entire home",4,1,1
+"Kensington-Cedar Cottage","Entire home",5,1,1
+"Kensington-Cedar Cottage","Entire rental unit",1,1,1
+"Kerrisdale","Entire guest suite",2,1,1
+"Kerrisdale","Entire guest suite",3,1,1
+"Kerrisdale","Entire home",1,1,1
+"Kerrisdale","Entire home",4,1,1
+"Killarney","Entire guest suite",3,1,1
+"Killarney","Entire home",3,1,1
+"Killarney","Entire home",5,1,1
+"Kitsilano","Entire home",5,1,1
+"Kitsilano","Entire rental unit",1,1,1
+"Kitsilano","Entire rental unit",2,1,1
+"Kitsilano","Entire townhouse",4,1,1
+"Marpole","Entire guest suite",1,1,1
+"Marpole","Entire home",2,1,1
+"Marpole","Entire home",3,1,1
+"Marpole","Entire home",5,1,1
+"Marpole","Entire rental unit",3,1,1
+"Mount Pleasant","Entire guest suite",3,1,1
+"Mount Pleasant","Entire home",2,1,1
+"Mount Pleasant","Entire home",4,1,1
+"Mount Pleasant","Entire rental unit",2,1,1
+"Oakridge","Entire guest suite",3,1,1
+"Oakridge","Entire home",4,1,1
+"Renfrew-Collingwood","Entire guest suite",NA,1,1
+"Renfrew-Collingwood","Entire home",4,1,1
+"Renfrew-Collingwood","Entire home",5,1,1
+"Riley Park","Entire guest suite",NA,1,1
+"Riley Park","Entire home",4,1,1
+"Riley Park","Entire rental unit",1,1,1
+"Riley Park","Entire rental unit",2,1,1
+"Shaughnessy","Entire home",1,1,1
+"Shaughnessy","Entire home",4,1,1
+"Shaughnessy","Entire home",7,1,1
+"South Cambie","Entire home",3,1,1
+"Strathcona","Entire guest suite",NA,1,1
+"Strathcona","Entire loft",1,1,1
+"Strathcona","Entire rental unit",1,1,1
+"Sunset","Entire guest suite",1,1,1
+"Sunset","Entire guesthouse",1,1,1
+"Sunset","Entire guesthouse",3,1,1
+"Sunset","Entire guesthouse",NA,1,1
+"Sunset","Entire home",7,1,1
+"Sunset","Entire townhouse",3,1,1
+"Victoria-Fraserview","Entire home",1,1,1
+"Victoria-Fraserview","Entire home",5,1,1
+"Victoria-Fraserview","Entire townhouse",4,1,1
+"West End","Entire condo",1,1,1
+"West End","Entire condo",3,1,1
