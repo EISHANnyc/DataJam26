@@ -3,7 +3,7 @@
 # Take our $711,889 gross revenue from the 13 units
 # Subtract real-world Vancouver operating expenses (Airbnb fee, property management, strata fees, city licences, property taxes, insurance, maintenance)
 # Calculate Net Operating Income
-# Calculate our official return metric: Net Cap Rate = 4.08% on the $10M fund
+# Calculate our official return metric: Net Cap Rate = 3.19% on the $10M fund
 # Build an honest Bear / Base / Bull scenario range so the judges see we prepared for market downturns or tourism booms
 
 library(tidyverse)
@@ -16,7 +16,7 @@ gross_revenue <- 711889
 
 opex_breakdown <- tibble(
   expense_name = c(
-    "AirBnb Platform fee (3%)",
+    "AirBnb Platform fee (15.5%)",
     "Property Management (15%)",
     "Strata Fees ($450/unit)",
     "Property Taxes and Vancouver Licenses",
@@ -24,7 +24,7 @@ opex_breakdown <- tibble(
     "Maintenance Reserve (4%)"
   ),
   cost = c(
-    .03 * gross_revenue,
+    .155 * gross_revenue,
     .15 * gross_revenue,
     13 * 450 * 12,
     13 * (688100 * .0028 + 1000),
@@ -64,11 +64,11 @@ pro_forma_table <- tibble(
 
 print(pro_forma_table)
 
-# we make 4.08% on the full $10m, but since we only put in $9.46m, we make 4.31% on that
+# we make 3.19% on the full $10m, but since we only put in $9.46m, we make 3.37% on that
 
 # now we should include uncertainty
 # - fixed costs stay the same ($)
-# - Variable costs (airBnb + Management, Maintenance = 22%)
+# - Variable costs (AirBnb 15.5% + Management 15% + Maintenance 4% = 34.5%)
 
 fixed_opex <- (13*450*12) + (13 * (688100 * .0028 + 1000)) + (13*250*12)
 
@@ -85,7 +85,7 @@ scenario_analysis <- tibble(
   )
 ) |> 
   mutate(
-    variable_opex = .22 * gross_rev,
+    variable_opex = .345 * gross_rev,
     total_costs = round(variable_opex + fixed_opex),
     net_income = round(gross_rev - total_costs),
     net_cap_rate = round((net_income / total_capital) * 100, 2)
