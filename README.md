@@ -1,6 +1,6 @@
 # DataJam 2026 – The Airbnb Vancouver Problem
 
-![DataJam Project](DataJam.png)
+![DataJam Project](Charts_and_Photos/DataJam.png)
 
 ## **Project Overview**
 This project analyses short-term rental listings in **Vancouver** to evaluate potential real estate investment opportunities for a hypothetical **$10 million CAD** investment fund (*Data-Driven Developments*)
@@ -33,12 +33,12 @@ Analysis results are saved in `Analysis/Outputs`.
 
 *You can run the R files from RStudio.*
 
-## **Presentation Charts**
-All **6** charts and maps used in the pitch are organized in [`Presentation_Charts/`](Presentation_Charts/).
+## **Charts & Photos**
+All **6** pitch charts/maps and event photos are organized in [`Charts_and_Photos/`](Charts_and_Photos/).
 
 ### *Portfolio Mix & Vacancy Risk (13 Condos vs. 4 Houses)*
-![Portfolio Mix and Vacancy Risk](Presentation_Charts/02_portfolio_frontier_13_condos.png)
+![Portfolio Mix and Vacancy Risk](Charts_and_Photos/02_portfolio_strategy_tradeoff.png)
 
 ### *Median Estimated Annual Revenue by Neighbourhood*
-![Median Estimated Annual Revenue Map](Presentation_Charts/04_map_median_revenue.png)
+![Median Estimated Annual Revenue Map](Charts_and_Photos/04_map_median_revenue.png)
 
