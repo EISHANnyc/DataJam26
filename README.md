@@ -3,7 +3,7 @@
 ![DataJam Project](DataJam.png)
 
 ## **Project Overview**
-This project analyses short-term rental listings in **Vancouver** to evaluate potential real estate investment opportunities for a hypothetical **$10 million CAD** investment fund (*Data-Driven Developments*).
+This project analyses short-term rental listings in **Vancouver** to evaluate potential real estate investment opportunities for a hypothetical **$10 million CAD** investment fund (*Data-Driven Developments*)
 
 The goal is to identify promising property types and investment strategies by examining *estimated rental revenue*, *property acquisition costs*, and *potential portfolio performance*.
 
