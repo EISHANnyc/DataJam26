@@ -34,7 +34,6 @@ Analysis results are saved in `Analysis/Outputs`.
 *You can run the R files from RStudio.*
 
 ## **Charts & Photos**
-All **6** pitch charts/maps and event photos are organized in [`Charts_and_Photos/`](Charts_and_Photos/).
 
 ### *Portfolio Mix & Vacancy Risk (13 Condos vs. 4 Houses)*
 ![Portfolio Mix and Vacancy Risk](Charts_and_Photos/02_portfolio_strategy_tradeoff.png)
